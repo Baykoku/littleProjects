@@ -1,0 +1,228 @@
+html,
+body {
+    width: 100%;
+    margin: 0;
+}
+
+/* DIAPORAMA */
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+#diaporama,
+section {
+    position: relative;
+}
+
+.imageActive {
+    display: block;
+}
+
+#diaporama div:not(.imageActive) {
+    display: none;
+}
+
+/* position texte */
+
+#diaporama h1,
+#diaporama div p {
+    position: absolute;
+    padding: 1%;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    color: greenyellow;
+}
+
+#diaporama h1 {
+    top: 4%;
+    left: 5%;
+    font-size: 3em;
+}
+
+div#diaporama p {
+    top: 80%;
+    right: 3%;
+    font-size: 2em;
+}
+
+#premier_para {
+    top: 1%;
+    right: inherit;
+    left: 5%
+}
+#deuxieme_para {
+    top: 
+}
+
+/* GESTION BOUTON DE DIAPORAMA */
+
+div#gestion_diapo button {
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    color: greenyellow;
+    font-size: 2em;
+    position: absolute;
+    top: 45%;
+    padding: 0;
+    border: 0;
+}
+
+#droite {
+    right: 2%;
+}
+
+#gauche {
+    left: 2%;
+}
+
+  /*******************/
+ /*      MAP        */
+/*******************/
+#section_map {
+    position: relative;
+    height: 900px;
+}
+
+#map {
+    position: absolute;
+    width: 70%;
+    height: 900px;
+}
+
+  /****************************************/
+ /*       AFFICHE INFO/RESERVATION       */
+/****************************************/
+
+#affiche_info-reservation_map {
+    position: absolute;
+    left: 70%;
+    width: 29.5%;
+}
+
+#info_station, 
+#signature_reservation,
+#confirmation_reservation {
+    width: 100%;
+    padding: 1%;
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    color: greenyellow;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#bouton_reservation {
+    background: greenyellow;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+#canvas {
+    width: 95%;
+    height: 80%;
+    border: 2px solid rgb(175, 253, 69);
+    margin: auto;
+}
+
+#boutons_signature {
+    text-align: center;
+}
+
+#signature_effacer,
+#signature_reserver {
+    background: rgba(0, 0, 0, 0.5);
+    color: greenyellow;
+    height: 30px;
+}
+
+.nom_contenu {
+    text-decoration: underline;
+    color: yellow;
+}
+
+  /****************************************/
+ /*            MEDIA QUERIES             */
+/****************************************/
+
+@media screen and (min-width: 751px) and (max-width: 1024px)
+{
+    #section_map {
+        position: inherit;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #map {
+        height: 500px;
+        width: 100%;
+        position: inherit;
+        margin-bottom: 10px;
+    }
+    
+    #affiche_info-reservation_map {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #affiche_info-reservation_map, 
+    #info_station,
+    #reservation_signature, 
+    confirmation_reservation {
+        position: inherit;
+        width: 100%;
+    }
+    
+    #canvas {
+        height: 350px;
+    }
+}
+
+@media screen and (min-device-width: 200px) and (max-device-width: 750px) {
+    
+    #diaporama h1,
+    div#diaporama p,
+    div#gestion_diapo button {
+        font-size: inherit;
+    }
+    
+    div#gestion_diapo button{
+        height: 20px;
+        width: 20px;
+    }
+    
+    p#premier_para {
+        top: 5%;
+        width: 60%;
+    }
+    
+    #section_map {
+        position: inherit;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #map {
+        height: 500px;
+        width: 100%;
+        position: inherit;
+        margin-bottom: 10px;
+    }
+    
+    #affiche_info-reservation_map {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #affiche_info-reservation_map, 
+    #info_station,
+    #reservation_signature, 
+    confirmation_reservation {
+        position: inherit;
+        width: 100%;
+    }  
+}

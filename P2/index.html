@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name=viewport content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='css/style.css'>
+    <title>Location de vélo</title>
+</head>
+
+<body>
+    <section>
+        <div id='diaporama'>
+            <div class='imageActive' id='debut'>
+                <img src='img/bike01.jpg' alt='location de vélo' />
+                <h1>Loca'vélo</h1>
+                <p>Cliquez une station pour réserver le vélo</p>
+            </div>
+            <div>
+                <img src='img/bike02.jpg' alt='location de vélo' />
+                <p>Signez pour réserver et promenez-vous</p>
+            </div>
+            <div id='fin'>
+                <img src='img/bike04.jpg' alt='location de vélo' />
+                <p id='premier_para'>Fini la promenade?<br />N'oubliez pas de vérrouiller le pneu à l'arrière</p>
+                <p id='deuxieme_para'>A la prochaine !</p>
+            </div>
+        </div>
+        <div id='gestion_diapo'>
+            <button id='gauche'>&lt;</button>
+            <button id='droite'>&gt;</button>
+        </div>
+    </section>
+
+    <section id='section_map'>
+        <div id='map'>
+        </div>
+        <div id="affiche_info-reservation_map">
+            <div id='info_station'>
+                <p class="nom_contenu">Information station</p>
+                <p id='station'></p>
+                <p id='adresse'></p>
+                <p id='status'></p>
+                <p id='placeVelo'></p>
+                <p id='veloDispo'></p>
+                <button id='bouton_reservation'>Réserver maintenant !</button>
+            </div>
+
+            <div id='signature_reservation'>
+                <p class="nom_contenu">Confirmation de réservation</p>
+                <canvas id='canvas'>
+                    vous n'avez pas accès à Canvais. Veuillez mettre à jour votre 
+                    navigateur.
+            </canvas>
+                <div id='boutons_signature'>
+                    <button id='signature_effacer'>Effacer</button>
+                    <button id='signature_reserver'>Réserver</button>
+                </div>
+            </div>
+            <div id='confirmation_reservation'>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAocx118gYlWu5fHnR2nBtBe87bg8PBviY"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src='js/application.js'></script>
+    <script src='js/ajax.js'></script>
+    <script src='js/diapo.js'></script>
+    <script src='js/map.js'></script>
+    <script src='js/apiJCDecaux.js'></script>
+    <script src='js/stations.js'></script>
+    <script src='js/info_station.js'></script>
+    <script src='js/signature_canvas.js'></script>
+    <script src='js/info_reservation.js'></script>
+</body>
+
+</html>
